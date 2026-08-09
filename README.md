@@ -1,3 +1,7 @@
+# framerwebsite
+
+Launch Framer real estate website.
+
 # Shalinthia.com Framer Blueprint Package — v2
 
 This package supersedes the prior CLOSED IN 60™ / CLOSED IN 60 DAYS website blueprint.
