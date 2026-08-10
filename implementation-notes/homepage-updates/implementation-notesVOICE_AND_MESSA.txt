@@ -1,0 +1,9 @@
+/implementation-notes/VOICE_AND_MESSAGING_RULES.md
+# Brand Governance
+
+Before creating or modifying any public-facing content:
+
+Read:
+implementation-notes/VOICE_AND_MESSAGING_RULES.md
+
+All website, Canva, Framer, and marketing outputs must follow these standards.
