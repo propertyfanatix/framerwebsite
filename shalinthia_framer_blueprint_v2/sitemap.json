@@ -1,0 +1,50 @@
+{
+  "site": {
+    "name": "Shalinthia.com",
+    "platform": "Framer",
+    "cdn_dns": "Cloudflare",
+    "brand_owner": "Shalinthia Miles",
+    "license_type": "Real Estate Salesperson",
+    "license_scope": "New York State",
+    "primary_markets": [
+      "Flatbush, Brooklyn, NY",
+      "East Flatbush, Brooklyn, NY"
+    ],
+    "secondary_market": "Prospect Park South, Brooklyn, NY",
+    "primary_specialty": "Seller strategy, residential home sales, 60-day seller success blueprint",
+    "program_name": "Brooklyn 60-Day Seller Success Blueprint",
+    "program_type": "Structured 60-day marketing and coordination program for eligible properties",
+    "program_pillars": [
+      "Tactical empathy",
+      "Ethical urgency",
+      "AI-assisted marketing"
+    ],
+    "primary_cta": "See If Your Property Qualifies",
+    "secondary_cta": "Request a Private Net-Proceeds Review",
+    "tertiary_cta": "Book a No-Pressure Qualification Review",
+    "promise": "Every recommendation\u2014whether pricing, timing, marketing, or negotiation\u2014is guided by the client's wishes, grounded in careful analysis, local expertise, and a commitment to protecting the client's equity."
+  },
+  "forbidden_language": [
+    "CLOSED IN 60",
+    "Closed in 60 Days",
+    "60-Day Guarantee",
+    "guaranteed sale",
+    "guaranteed closing",
+    "guaranteed top dollar"
+  ],
+  "required_disclaimers": {
+    "program": "The Brooklyn 60-Day Seller Success Blueprint is a structured marketing and coordination program for eligible properties.",
+    "no_guarantee": "No agent can guarantee sale price, profit, buyer behavior, lender timelines, appraisal outcomes, title clearance, or closing date.",
+    "ai": "AI tools are used as assistive aids in content creation and market analysis. All content is reviewed and finalized by a licensed real estate professional."
+  },
+  "navigation": [
+    "Home",
+    "About",
+    "My Process",
+    "Seller Guidance",
+    "Neighborhoods",
+    "Market Insights",
+    "Contact"
+  ],
+  "primary_hub": "/brooklyn-60-day-seller-success-blueprint"
+}

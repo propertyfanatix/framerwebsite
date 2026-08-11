@@ -1,0 +1,78 @@
+{
+  "page_name": "",
+  "slug": "",
+  "parent": "",
+  "page_family": "",
+  "purpose": "",
+  "psychological_objective": "",
+  "target_visitor": "",
+  "primary_question": "",
+  "answer_capsule_40_60_words": "",
+  "primary_cta": "",
+  "secondary_cta": "",
+  "lead_magnet": "",
+  "blueprint_module": "",
+  "compliance": {
+    "program_disclaimer_required": true,
+    "no_guarantee_disclaimer_required": true,
+    "ai_disclosure_required_if_ai_referenced": true,
+    "brokerage_identification_required": true
+  },
+  "sections": [
+    {
+      "order": 1,
+      "name": "Hero"
+    },
+    {
+      "order": 2,
+      "name": "Answer Capsule"
+    },
+    {
+      "order": 3,
+      "name": "Shalinthia's Perspective"
+    },
+    {
+      "order": 4,
+      "name": "Decision Factors"
+    },
+    {
+      "order": 5,
+      "name": "Local / Property / Situation Context"
+    },
+    {
+      "order": 6,
+      "name": "Tradeoffs and Exceptions"
+    },
+    {
+      "order": 7,
+      "name": "Related Blueprint Module"
+    },
+    {
+      "order": 8,
+      "name": "FAQ"
+    },
+    {
+      "order": 9,
+      "name": "Related Content"
+    },
+    {
+      "order": 10,
+      "name": "My Promise"
+    },
+    {
+      "order": 11,
+      "name": "Compliance Block"
+    },
+    {
+      "order": 12,
+      "name": "Primary CTA"
+    }
+  ],
+  "aeo_geo": {
+    "direct_answer_required": true,
+    "author_required": true,
+    "last_updated_required": true,
+    "sources_required_for_market_claims": true,
+    "faq_count_target": "5-8"
+  }
+}
