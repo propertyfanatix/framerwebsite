@@ -45,5 +45,6 @@ Every recommendation must be framed as:
 - Do not imply protected-class preferences.
 - Do not make unsubstantiated “best,” “top,” or similar superiority claims.
 - Do not misstate license type.
-- Include brokerage identification and required contact information in public-facing advertising.
-- All final public-facing materials should be reviewed for brokerage compliance before publication.
+- eXp requires co-branding on all marketing: use the Shalinthia | eXp Realty co-branded logo on every public-facing visual (see BRAND_2026.md). A "Brokered by" credit line is not required in the USA; do not add it.
+- Include the required contact information (Licensed Real Estate Salesperson, shalinthia.com, direct line, hotline).
+- All final public-facing materials are reviewed by Shalinthia before publication.

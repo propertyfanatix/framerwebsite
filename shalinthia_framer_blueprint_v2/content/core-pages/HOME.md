@@ -393,7 +393,7 @@ Shalinthia Miles is a licensed real estate salesperson in Brooklyn, NY, speciali
 
 ### Footer compliance copy
 
-Brokered by eXp Realty. Add the required brokerage identification, license information, contact details, and any required fair-housing or advertising disclosures before publication.
+Place the Shalinthia | eXp Realty co-branded logo (brand/logos/shalinthia-exp-cobrand-black.png). Then add: Licensed Real Estate Salesperson · shalinthia.com · Direct: 646-804-3070 · 24/7 Hotline: 929-367-SOLD, plus any required fair-housing or advertising disclosures before publication. No "Brokered by" line (not required in the USA). See BRAND_2026.md.
 
 The Brooklyn 60-Day Seller Success Blueprint is a structured marketing and coordination program for eligible properties.
 
@@ -401,7 +401,7 @@ No agent can guarantee sale price, profit, buyer behavior, lender timelines, app
 
 ### Framer direction
 
-Use the reusable footer component. Keep it legible, calm, and complete: logo, short identity copy, navigation, brokerage information, required contact details, and compliance text. Preserve the existing footer alignment and visual style.
+Use the reusable footer component. Keep it legible, calm, and complete: co-branded logo, short identity copy, navigation, required contact details, and compliance text. Preserve the existing footer alignment and visual style.
 
 ### Image
 

@@ -40,7 +40,7 @@ It is a structured 60-day marketing and coordination program for eligible proper
 - Do not create a Seller Academy.
 - Do not create a Success Stories section.
 - Do not make eXp Realty the focal brand.
-- Use “Brokered by eXp Realty” in the footer as required.
+- eXp co-branding: place the Shalinthia | eXp Realty co-branded logo (brand/logos/) in the footer of every page and on every marketing visual. No "Brokered by" line (not required in the USA). See BRAND_2026.md, which overrides this prompt.
 - Every recommendation must be client-led, analytical, locally informed, and equity-protective.
 
 ## Program Pillars

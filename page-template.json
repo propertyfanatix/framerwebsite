@@ -16,7 +16,8 @@
     "program_disclaimer_required": true,
     "no_guarantee_disclaimer_required": true,
     "ai_disclosure_required_if_ai_referenced": true,
-    "brokerage_identification_required": true
+    "cobranded_logo_required": true,
+    "brokered_by_line_required": false
   },
   "sections": [
     {

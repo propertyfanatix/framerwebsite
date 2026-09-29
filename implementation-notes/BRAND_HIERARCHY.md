@@ -203,6 +203,7 @@ Reuse existing Framer styles and components wherever possible.
 Verified existing visual elements include:
 
 - Shalinthia script logo
+- Shalinthia | eXp Realty co-branded logo (required on all marketing; see BRAND_2026.md)
 - Ivory
 - Ink
 - Oxblood

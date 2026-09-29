@@ -27,8 +27,8 @@
 ### Footer
 
 - **Create:** Nothing new; place the existing Footer component.
-- **Use:** Existing Footer styling and logo treatment.
-- **Copy:** Add the approved identity, navigation, brokerage, and compliance copy from the Footer section of `HOME.md` without rewriting it.
+- **Use:** Existing Footer styling, with the Shalinthia | eXp Realty co-branded logo as the footer logo (see `BRAND_2026.md`).
+- **Copy:** Add the approved identity, navigation, contact, and compliance copy from the Footer section of `HOME.md` without rewriting it. No "Brokered by" line.
 - **Reusable:** Yes; use the existing component only.
 - **Reel/video:** No.
 

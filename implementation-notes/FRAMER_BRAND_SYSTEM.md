@@ -1,5 +1,12 @@
 # Framer Brand System — Visual Source of Truth
 
+> **Update 2026-09-29:** `BRAND_2026.md` (repo root) now controls. It adds three rules:
+> - the Shalinthia | eXp Realty co-branded logo in every page footer and on all marketing;
+> - no "Brokered by" line;
+> - Shalinthia's guidelines v2026.2: navy `#0D1028` and beige `#D9D3CB` join the palette as thin accents and dividers, and gold `#B08D57` is retired.
+>
+> The verified Framer tokens below still apply.
+
 **Status:** This document records the existing Shalinthia.com August 2026 Rebuild. Manually verified values in this file are the source of truth. Do not replace the visual identity with a new palette, font pairing, template, or component system.
 
 ## Brand preservation rule
