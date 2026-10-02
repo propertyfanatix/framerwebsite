@@ -394,7 +394,7 @@ Shalinthia Miles is a Licensed Real Estate Salesperson who helps clients make in
 
 ### Footer compliance copy
 
-Place the Shalinthia | eXp Realty co-branded logo (brand/logos/shalinthia-exp-cobrand-black.png). Then add: Licensed Real Estate Salesperson · shalinthia.com · Direct: 646-804-3070 · 24/7 Hotline: 929-367-SOLD, plus any required fair-housing or advertising disclosures before publication. No "Brokered by" line (not required in the USA). See BRAND_2026.md.
+Place the Shalinthia | eXp Realty co-branded logo (brand/logos/shalinthia-exp-cobrand-black.png). Then add: Licensed Real Estate Salesperson · shalinthia.com · Direct: 646-804-3070 · 24-Hour Office 929-367-SOLD (7653), plus any required fair-housing or advertising disclosures before publication. No "Brokered by" line (not required in the USA). See BRAND_2026.md.
 
 The Brooklyn 60-Day Seller Success Blueprint is a structured marketing and coordination program for eligible properties.
 

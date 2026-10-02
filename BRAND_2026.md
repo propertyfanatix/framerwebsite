@@ -43,7 +43,7 @@ Use this order:
 3. Licensed Real Estate Salesperson.
 4. shalinthia.com.
 5. Direct: 646-804-3070.
-6. 24/7 Hotline: 929-367-SOLD.
+6. 24-Hour Office 929-367-SOLD (7653). Her words, 2026-10-02: "it should read 24-hour office" (she blocks one day a week in Reservation, so never "24/6"). The form follows PropertyFanatix D29: hyphenated, title case; never "24/7", "Hotline", "24 Hour" or "24hr"; in running text, "Shalinthia's office". PropertyFanatix's panel advised it goes live the day her AI receptionist answers every call.
 7. The disclosures that apply to the page:
    - Program: "The Brooklyn 60-Day Seller Success Blueprint is a structured marketing and coordination program for eligible properties."
    - No guarantee: "No agent can guarantee sale price, profit, buyer behavior, lender timelines, appraisal outcomes, title clearance, or closing date."

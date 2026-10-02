@@ -54,5 +54,5 @@ Her decision (2026-10-01): one shared consent wording on her website and PESACH 
 - Do not make unsubstantiated “best,” “top,” or similar superiority claims.
 - Do not misstate license type.
 - eXp requires co-branding on all marketing: use the Shalinthia | eXp Realty co-branded logo on every public-facing visual (see BRAND_2026.md). A "Brokered by" credit line is not required in the USA; do not add it.
-- Include the required contact information (Licensed Real Estate Salesperson, shalinthia.com, direct line, hotline).
+- Include the required contact information (Licensed Real Estate Salesperson, shalinthia.com, direct line, 24-Hour Office line).
 - All final public-facing materials are reviewed by Shalinthia before publication.
