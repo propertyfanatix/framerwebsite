@@ -263,6 +263,8 @@
   .consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.5;margin:12px 0 0;text-transform:none;letter-spacing:0;font-weight:400;}
   .consent input{width:auto;margin-top:3px;}
   .consent-privacy{font-size:11px;opacity:0.75;margin:10px 0 0;}
+  .consent-notice{font-size:12px;line-height:1.5;opacity:0.8;margin:14px 0 0;}
+  .consent-notice a{color:inherit;text-decoration:underline;}
   .cobrand{text-align:center;margin:24px 0 8px;}
   .cobrand img{max-width:240px;height:auto;}
   .review-note{
@@ -348,7 +350,7 @@
   <!-- STEP 4: Lead capture (soft gate) -->
   <div class="card" id="step4" style="display:none;">
     <div class="step-label">Step 4 of 4</div>
-    <h2 class="step-title">Where should we send your readiness report?</h2>
+    <h2 class="step-title">Where should we send your HDFC Co-op Guide?</h2>
     <div class="error-msg" id="err4"></div>
     <label for="name">Full Name</label>
     <input type="text" id="name" placeholder="Jane Doe">
@@ -356,13 +358,12 @@
     <input type="text" id="email" placeholder="jane@email.com">
     <label for="phone">Phone</label>
     <input type="text" id="phone" placeholder="(646) 555-0100">
-    <!-- Consent wording SOS-CONSENT-2026-10-v2 (shared by her website and PESACH forms): exact text, both boxes unticked, never required. Email and texts only. -->
-    <label class="consent"><input type="checkbox" id="consent_email"> Yes, email me real estate news, listings and market updates from Shalinthia Miles, Licensed Real Estate Salesperson. I can unsubscribe anytime.</label>
-    <label class="consent"><input type="checkbox" id="consent_sms"> Yes, Shalinthia Miles, Licensed Real Estate Salesperson, may text me at the number above about my request, appointments and real estate updates, including marketing texts sent with automated technology. Consent is not a condition of any purchase or service. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help.</label>
-    <p class="consent-privacy">Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
-    <!-- Her decision (2026-10-02): the answers go to SOS. Privacy Engineer's wording; her lawyer confirms it. -->
-    <p class="consent-privacy">Sending this shares your answers and result with Shalinthia Miles, Licensed Real Estate Salesperson, so she can talk this building through with you. See the <a href="https://shalinthia.com/privacy">Privacy Policy</a>.</p>
-    <button class="btn" onclick="submitLead()">Show My Readiness Report</button>
+    <!-- Her decision (2026-10-02): "DO NOT use 2 checkboxes. Notice is sufficient." One notice, SOS-CONSENT-2026-10-HDFC-NOTICE
+         (SOS config/compliance-sources.yaml holds these exact words and their hash). Built from wording she had already approved:
+         SOS-CONSENT-2026-10-v2 (the texting and privacy sentences) and Reservation's booking form ("Msg & data rates may apply."),
+         with PropertyFanatix's standard disclosure ("Text STOP anytime to opt out."). Change a word only with a new version in SOS. -->
+    <p class="consent-notice">Sending this shares your answers and result with Shalinthia Miles, Licensed Real Estate Salesperson, who will email you the HDFC Co-op Guide and may text you at the number above about your request and appointments, including texts sent with automated technology. Msg &amp; data rates may apply. Text STOP anytime to opt out. Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
+    <button class="btn" onclick="submitLead()">Send My Guide &amp; See My Result</button>
     <button class="btn btn-ghost" style="margin-top:10px;" onclick="goStep(3)">Back</button>
   </div>
 
@@ -571,7 +572,8 @@ function renderResult(r){
     </div>`;
   }
 
-  html += `<div class="cta-box">
+  html += `<p class="tier-sub">Your HDFC Co-op Guide is on its way to your inbox.</p>
+    <div class="cta-box">
       <div class="cta-label">Next step</div>
       <a href="https://book.shalinthia.com/meeting/BuyerConsultation?src=website" target="_blank" rel="noopener" style="text-decoration:none;">
         <button class="btn">Book a Consultation with Shalinthia</button>
@@ -604,9 +606,10 @@ function hdfcFields(r){
     first_name: parts[0] || "",
     last_name: parts.slice(1).join(" "),
     email: state.email, phone: state.phone,
-    consent_email: document.getElementById('consent_email').checked ? "on" : "",
-    consent_sms: document.getElementById('consent_sms').checked ? "on" : "",
-    consent_language_version: "SOS-CONSENT-2026-10-v2",
+    // One notice above the button, no boxes (her decision, 2026-10-02): sending is the agreement. Texts only with a number.
+    consent_email: "on",
+    consent_sms: state.phone ? "on" : "",
+    consent_language_version: "SOS-CONSENT-2026-10-HDFC-NOTICE",
     hdfc_building_id: other ? "NOT_LISTED" : buildingId(b),
     hdfc_building_name: other ? "" : b.name,
     hdfc_buildings_version: BUILDINGS_VERSION,
