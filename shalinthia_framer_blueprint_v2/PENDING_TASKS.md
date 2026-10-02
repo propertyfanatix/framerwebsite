@@ -1,6 +1,6 @@
 # Pending Tasks
 
-> **REPLACED BY SOS, PENDING SHALINTHIA'S CONFIRMATION (2026-10-02).** Website forms now send leads to SOS (see `SOS_INTEGRATION.md` at the repo root), and SOS writes HubSpot, the record, and Lofty. Don't build the website-to-Lofty bridge this file describes: it would create every Lofty lead twice and treat Lofty, not HubSpot, as the record. Retiring this plan for good is Shalinthia's decision.
+> **RETIRED (Shalinthia, 2026-10-02: "YES"). Replaced by SOS.** Website forms now send leads to SOS (see `SOS_INTEGRATION.md` at the repo root), and SOS writes HubSpot, the record, and Lofty. Don't build the website-to-Lofty bridge this file describes: it would create every Lofty lead twice and treat Lofty, not HubSpot, as the record. She retired this plan for good.
 
 ## Post-build: Lofty P0 acknowledged lead integration
 

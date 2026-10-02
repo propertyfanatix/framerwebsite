@@ -86,7 +86,7 @@ Her decision (2026-10-02): clients can register for PropertyFanatix, her client 
 ## 6. Never
 
 - No browser calls to Lofty, HubSpot, SOS, n8n or a Google Apps Script. Leads reach HubSpot and Lofty only through SOS.
-- No second webhook on a form (for example, straight to Lofty). Retiring this repo's older Framer-to-Lofty plan is her decision.
+- No second webhook on a form (for example, straight to Lofty). This repo's older Framer-to-Lofty plans are retired for good (her "YES", 2026-10-02): every Lofty lead would be created twice.
 - No keys, tokens or secrets in Framer.
 - No fields beyond section 1.
 - No "Brokered by" line.
