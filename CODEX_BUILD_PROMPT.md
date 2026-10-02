@@ -40,7 +40,7 @@ It is a structured 60-day marketing and coordination program for eligible proper
 - Do not create a Seller Academy.
 - Do not create a Success Stories section.
 - Do not make eXp Realty the focal brand.
-- Use “Brokered by eXp Realty” in the footer as required.
+- Name the brokerage in the footer as "eXp Realty, LLC" with its address, and the co-brand lockup or eXp logo. Never "Brokered by eXp Realty" (her decision D57, 2026-10-02; see `COMPLIANCE_RULES.md`).
 - Every recommendation must be client-led, analytical, locally informed, and equity-protective.
 
 ## Program Pillars

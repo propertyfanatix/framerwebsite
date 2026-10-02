@@ -393,7 +393,7 @@ Shalinthia Miles is a licensed real estate salesperson in Brooklyn, NY, speciali
 
 ### Footer compliance copy
 
-Brokered by eXp Realty. Add the required brokerage identification, license information, contact details, and any required fair-housing or advertising disclosures before publication.
+eXp Realty, LLC, 300 Cadman Plaza West, 12th Floor, One Pierrepont Plaza, Brooklyn, NY 11201. Never "Brokered by eXp Realty" (her decision D57, 2026-10-02; `COMPLIANCE_RULES.md`). Add the required brokerage identification, license information, contact details, and any required fair-housing or advertising disclosures before publication.
 
 The Brooklyn 60-Day Seller Success Blueprint is a structured marketing and coordination program for eligible properties.
 
