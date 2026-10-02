@@ -55,7 +55,7 @@ These come from her decisions recorded in the client portal's repository (`prope
 - **Never "Brokered by eXp Realty"** (her words, 2026-10-02: "that only pertains to Canada"; D57). The brokerage is still named: the Shalinthia | eXp Realty co-brand lockup or the eXp Realty logo, and the line "eXp Realty, LLC, 300 Cadman Plaza West, 12th Floor, One Pierrepont Plaza, Brooklyn, NY 11201".
 - **Her numbers, exactly:**
   - "Direct 646-804-3070" (`tel:+16468043070`).
-  - "Office 929-367-SOLD (7653)" (`tel:+19293677653`). It becomes "24-Hour Office 929-367-SOLD (7653)", with "Answered by Shalinthia's AI virtual assistant." under it, only on the day her AI receptionist answers every call (D29). Change the site the same day the portal's switch changes.
+  - "Office 929-367-SOLD (7653)" (`tel:+19293677653`). It becomes "24-Hour Office 929-367-SOLD (7653)" only on the day her AI receptionist answers every call, and only after eXp has reviewed the label on this site (D29). On this site it carries the full line, "The 24-Hour Office is answered by Shalinthia's AI virtual assistant." (D29 has a second sentence that waits for her yes). Change the site the same day the portal's switch changes.
   - Never "24/7" or "Hotline".
   - 646-863-8071 is her Lofty number, for texting only. Never show it as a number to call.
 - **The name is PropertyFanatix**, never "ThePropertyFanatix". It doesn't appear on this site (`homepage-updates/DAY2_VALUE_DIFFERENTIATOR_UPDATE.md`); the navigation item is "Client Portal" (`implementation-notes/CLIENT_PORTAL_NAV.md`).

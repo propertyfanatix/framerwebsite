@@ -28,17 +28,18 @@ These follow `FRAMER_BRAND_SYSTEM.md`: reuse the existing **Navigation** compone
 4. In the mobile menu variant, add the same item. It opens an inline section with the same line, **Sign in** and **Create your account**, stacked full width.
 5. Set both links to open in the same tab: no `target="_blank"`, never embedded.
 6. Preview on desktop and on a phone, and share the preview with her.
-7. Publish only after she approves it, and only on the day the portal goes live (section 4).
+7. Publish only after she approves it, after eXp compliance clears it in writing, and only on the day the portal goes live (section 4).
 
 ## 3. What the two links do (checked against the portal on 2026-10-02)
 
 - **Sign in** (`/signin`): a passkey first ("Sign in with Face ID, fingerprint or screen lock"), **Continue with Google**, or an email link with a 6-digit code that works once, for 15 minutes. A sign-in never links a deal.
 - **Create your account** (`/register`): accounts open by her invitation for now. Her invitation email opens the client portal and lasts 14 days. The page's main button is **Continue with your email**, for someone whose invitation link ran out; it uses the same email address. Her later front door (D65: one "Create your account" screen for everyone, where no invitation opens a property profile) isn't built yet; the link stays the same when it is.
-- The portal's own pages carry her "PropertyFanatix by Shalinthia" header. That's inside the portal, not on this site.
+- Inside the portal, Sign in and the signed-in pages carry her "PropertyFanatix by Shalinthia" header; Create your account carries the Shalinthia | eXp Realty co-brand lockup. Neither is on this site.
 
 ## 4. Before the item goes live
 
 - The portal must be live at `clients.shalinthia.com` first (the portal's `docs/GO-LIVE.md`). Until then both links reach a page that isn't there.
+- eXp compliance clears the item in writing first (the portal's `docs/legal/COUNSEL-QUESTIONS.md`, Q42).
 - Publish this Framer change on the same day the portal goes live.
 
 ## 5. Links this site may use (one home for each)
