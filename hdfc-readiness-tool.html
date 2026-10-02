@@ -321,7 +321,8 @@
       <option value="5">5 people</option>
       <option value="6">6 people</option>
       <option value="7">7 people</option>
-      <option value="8">8+ people</option>
+      <option value="8">8 people</option>
+      <option value="9">9 or more people</option>
     </select>
     <label for="income">Total Annual Household Income</label>
     <input type="text" id="income" inputmode="numeric" placeholder="Enter your combined annual household income">
@@ -495,7 +496,9 @@ function computeResult(){
   const buildingSel = state.buildingIdx;
   const isOther = buildingSel === "__other__";
   const building = isOther ? null : BUILDINGS[buildingSel];
-  const needsReview = isOther || (building && building.review);
+  // The published caps stop at 8 people; a larger household is checked by hand, never against the 8-person cap.
+  const beyondTable = !!(building && !building.review && state.hhSize > building.caps.length);
+  const needsReview = isOther || (building && building.review) || beyondTable;
 
   const hhIdx = state.hhSize - 1;
   const cap = (!needsReview && building) ? building.caps[hhIdx] : null;
@@ -515,6 +518,8 @@ function computeResult(){
     tierClass = "tier-not";
     tierMsg = isOther
       ? "This building isn't in our system yet — we'll verify caps and follow up with you directly."
+      : beyondTable
+      ? "This building's published caps stop at 8 people — we'll check the limit for your household size manually."
       : "This building uses a statutory formula rather than a flat income cap — we'll review your numbers manually.";
   } else if(capOveragePct !== null && capOveragePct > 10){
     tier = "Let's Explore Other Options";
