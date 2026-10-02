@@ -4,7 +4,8 @@ Before doing any website, Framer, content, SEO, AEO, GEO, copy, or component wor
 
 1. implementation-notes/BRAND_HIERARCHY.md
 2. implementation-notes/FRAMER_BRAND_SYSTEM.md
-3. shalinthia_framer_blueprint_v2/COMPLIANCE_RULES.md
+3. shalinthia_framer_blueprint_v2/COMPLIANCE_RULES.md (including her brokerage, phone and name rules of 2026-09-30 to 2026-10-02)
+4. implementation-notes/CLIENT_PORTAL_NAV.md, before touching the Navigation component or any link to her booking site or client portal
 
 ## Brand Hierarchy
 
