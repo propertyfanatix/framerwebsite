@@ -360,6 +360,8 @@
     <label class="consent"><input type="checkbox" id="consent_email"> Yes, email me real estate news, listings and market updates from Shalinthia Miles, Licensed Real Estate Salesperson. I can unsubscribe anytime.</label>
     <label class="consent"><input type="checkbox" id="consent_sms"> Yes, Shalinthia Miles, Licensed Real Estate Salesperson, may text me at the number above about my request, appointments and real estate updates, including marketing texts sent with automated technology. Consent is not a condition of any purchase or service. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help.</label>
     <p class="consent-privacy">Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
+    <!-- Her decision (2026-10-02): the answers go to SOS. Privacy Engineer's wording; her lawyer confirms it. -->
+    <p class="consent-privacy">Sending this shares your answers and result with Shalinthia Miles, Licensed Real Estate Salesperson, so she can talk this building through with you. See the <a href="https://shalinthia.com/privacy">Privacy Policy</a>.</p>
     <button class="btn" onclick="submitLead()">Show My Readiness Report</button>
     <button class="btn btn-ghost" style="margin-top:10px;" onclick="goStep(3)">Back</button>
   </div>
@@ -408,7 +410,11 @@ const BUILDINGS = [
   {name:"48-18 Vernon Boulevard HDFC", ami:"120% AMI", caps:[112080,128160,144120,160080,172886,185693,198499,211306], review:false},
 ];
 
-const LEADS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxt_OluU6_RbXL2f2FT3baf1bBEzJJEHdd14JryZXobG7EN6qOTnktiD8YuN3Gk_rfZug/exec";
+// Leads go to SOS only (her words, 2026-10-02: "this data must go to SOS"). No Google Apps Script, and no secret in
+// this page: in Framer, sendLead() fills the native form's fields and that form's signed webhook carries them to SOS
+// (SOS_INTEGRATION.md section 7).
+const SOS_HDFC_FORM_ID = "FORM-HDFC-READINESS";
+const BUILDINGS_VERSION = "v0"; // becomes the buildings file's version once data/hdfc/buildings.v1.json exists
 
 let state = {};
 
@@ -575,36 +581,57 @@ function renderResult(r){
   el.innerHTML = html;
 }
 
-function sendLead(r){
-  if(!LEADS_ENDPOINT || LEADS_ENDPOINT.indexOf("PASTE_YOUR") === 0){
-    console.warn("Leads endpoint not configured yet — lead not sent.", state, r);
-    return;
-  }
-  const building = state.buildingIdx === "__other__" ? "Not Listed: (free text not captured in this version)" : BUILDINGS[state.buildingIdx].name;
-  const payload = {
-    timestamp: new Date().toISOString(),
-    name: state.name, email: state.email, phone: state.phone,
+// The result the visitor saw, as SOS's key.
+const RESULT_KEY = {
+  "Ready to Apply": "BOTH_MET",
+  "Close — Almost There": "ONE_MET",
+  "Not Yet Eligible": "NEITHER_MET",
+  "Let's Explore Other Options": "INCOME_OVER_LIMIT",
+  "Manual Review Needed": "MANUAL_CHECK"
+};
+
+function buildingId(b){
+  return b.name.replace(/ HDFC$/, "").toUpperCase().replace(/[^A-Z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+}
+
+// Exactly the fields SOS accepts from this form (SOS_INTEGRATION.md section 7), whole dollars only.
+function hdfcFields(r){
+  const other = state.buildingIdx === "__other__";
+  const b = other ? null : BUILDINGS[state.buildingIdx];
+  const parts = (state.name || "").trim().split(/\s+/);
+  return {
+    form_id: SOS_HDFC_FORM_ID,
+    first_name: parts[0] || "",
+    last_name: parts.slice(1).join(" "),
+    email: state.email, phone: state.phone,
     consent_email: document.getElementById('consent_email').checked ? "on" : "",
     consent_sms: document.getElementById('consent_sms').checked ? "on" : "",
     consent_language_version: "SOS-CONSENT-2026-10-v2",
-    building: building,
-    householdSize: state.hhSize,
-    annualIncome: state.income,
-    liquidFunds: state.funds,
-    purchasePrice: state.price,
-    incomeCapUsed: r.cap || "",
-    downPaymentNeeded: r.downNeeded,
-    resultTier: r.tier,
-    incomeCheck: r.incomePass===null ? "N/A - Manual Review" : (r.incomePass ? "Pass":"Fail"),
-    fundsCheck: r.fundsPass ? "Pass":"Fail",
-    notes: r.needsReview ? "Flagged for manual building review" : ""
+    hdfc_building_id: other ? "NOT_LISTED" : buildingId(b),
+    hdfc_building_name: other ? "" : b.name,
+    hdfc_buildings_version: BUILDINGS_VERSION,
+    hdfc_household_size: String(state.hhSize),
+    hdfc_annual_income: String(Math.round(state.income)),
+    hdfc_liquid_funds: String(Math.round(state.funds)),
+    hdfc_target_price: String(Math.round(state.price)),
+    hdfc_cap_shown: r.cap ? String(Math.round(r.cap)) : "",
+    hdfc_result: RESULT_KEY[r.tier] || ""
   };
-  fetch(LEADS_ENDPOINT, {
-    method: "POST",
-    mode: "no-cors",
-    headers: {"Content-Type":"text/plain"},
-    body: JSON.stringify(payload)
-  }).catch(err=>console.error("Lead submission failed:", err));
+}
+
+function sendLead(r){
+  const fields = hdfcFields(r);
+  const form = document.getElementById('sos-hdfc-form');
+  if(!form){
+    console.warn("The SOS form isn't on this page yet: nothing was sent.");
+    return;
+  }
+  for (const [k, v] of Object.entries(fields)) {
+    let input = form.querySelector('input[name="' + k + '"]');
+    if (!input) { input = document.createElement('input'); input.type = 'hidden'; input.name = k; form.appendChild(input); }
+    input.value = v == null ? "" : String(v);
+  }
+  if (form.requestSubmit) form.requestSubmit(); else form.submit();
 }
 </script>
 <!-- eXp co-branding (BRAND_2026.md): the Shalinthia | eXp Realty co-branded logo on every public page. -->

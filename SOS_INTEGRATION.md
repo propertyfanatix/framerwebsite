@@ -6,7 +6,7 @@ SOS is Shalinthia Miles' operating system. This file tells the Framer builder ho
 
 ## 1. Lead forms
 
-Scope: her ad landing-page seller forms. Whether her other forms (contact, home value, HDFC calculator) feed SOS is her decision (REQUIRES APPROVAL).
+Scope: her ad landing-page seller forms, and her HDFC readiness calculator (section 7). Whether her other forms (contact, home value) feed SOS is her decision (REQUIRES APPROVAL).
 
 Exact field names (SOS ignores others):
 
@@ -85,14 +85,32 @@ Her decision (2026-10-02): clients can register for PropertyFanatix, her client 
 
 ## 6. Never
 
-- No browser calls to Lofty, HubSpot, SOS, n8n or a Google Apps Script. Leads reach HubSpot and Lofty only through SOS.
+- No browser calls to Lofty, HubSpot, SOS, n8n or a Google Apps Script. Leads reach HubSpot and Lofty only through SOS. The HDFC calculator's old Apps Script call is removed (her Google Sheet had no real entries, her words: "Not yet").
 - No second webhook on a form (for example, straight to Lofty). This repo's older Framer-to-Lofty plans are retired for good (her "YES", 2026-10-02): every Lofty lead would be created twice.
 - No keys, tokens or secrets in Framer.
 - No fields beyond section 1.
 - No "Brokered by" line.
 - Always: the Shalinthia | eXp Realty co-branded logo in every page footer (`BRAND_2026.md`).
 
-## 7. Test checklist
+## 7. HDFC readiness calculator
+
+Her decision (2026-10-02): "NO, this data must go to SOS. I am NOT targeting anyone. These details have been volunteered." The calculator keeps working as it does; its lead and what the visitor entered go to SOS through the same signed Framer webhook (section 2), never a Google Apps Script.
+
+- **Build:** a Framer code component that works out the result on the page and then fills a native Framer form's fields and submits it. `hdfc-readiness-tool.html` is the reference: `hdfcFields()` lists exactly what is sent; no secret is ever in the page.
+- **Form ID:** hidden `form_id` = `FORM-HDFC-READINESS` (SOS's `integrations.website.hdfc_readiness_form_id`). SOS makes it a **buyer** lead outside Experiment 001.
+- **Fields, besides section 1's name, email, phone and consent fields:**
+  - `hdfc_building_id`: capitals, digits and hyphens (3 to 40), or `NOT_LISTED`;
+  - `hdfc_building_name` (up to 120 characters), `hdfc_buildings_version` (`v` plus digits), `hdfc_buildings_sha256` (once the buildings file exists);
+  - `hdfc_household_size`: 1 to 8, or 9 for "9 or more";
+  - `hdfc_annual_income`, `hdfc_liquid_funds`, `hdfc_target_price`, `hdfc_cap_shown`: whole dollars, digits only;
+  - `hdfc_result`: `BOTH_MET`, `ONE_MET`, `NEITHER_MET`, `INCOME_OVER_LIMIT` or `MANUAL_CHECK` (the result shown).
+  - A figure SOS can't read is kept blank and named; the lead still arrives.
+- **Above the submit button**, these words (her lawyer confirms them): "Sending this shares your answers and result with Shalinthia Miles, Licensed Real Estate Salesperson, so she can talk this building through with you. See the Privacy Policy."
+- **In SOS** the figures are hers alone to read, on the lead's page, and are never used to rank, sort or prioritize anyone, never sent to HubSpot or Lofty, and never in alerts, reports or exports.
+- **Never** ask ages, relationships, children, marital status or where income comes from.
+- **NOT LIVE YET:** waits on the Framer component and form, and section 2.
+
+## 8. Test checklist
 
 Use a private window: `?sos_test=1` keeps a browser in test mode until its storage is cleared.
 
