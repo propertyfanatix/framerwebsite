@@ -4,7 +4,7 @@
 
 Shalinthia.com is the personal website of Shalinthia Miles, a licensed New York real estate salesperson.
 
-The site is currently hyperlocal to Brooklyn, with emphasis on Flatbush and East Flatbush, while remaining consistent with statewide licensure.
+The site serves clients wherever they are making a real estate decision (her words, 2026-10-01: "I am not only focused on Brooklyn"). Its neighborhood pages keep their local focus, including Flatbush and East Flatbush, consistent with statewide licensure.
 
 ## Brand Hierarchy
 

@@ -13,7 +13,6 @@
     --charcoal:#24221F;
     --cream:#F6F3EE;
     --beige:#D9D3CB;
-    --gold:#B08D57;
   }
   *{box-sizing:border-box;}
   body{
@@ -66,7 +65,7 @@
     text-transform:uppercase;
     letter-spacing:0.1em;
     font-size:10px;
-    color:var(--gold);
+    color:var(--burgundy);
     margin-bottom:6px;
   }
   .step-title{
@@ -150,7 +149,7 @@
     margin:0 0 6px;
   }
   .tier-ready .tier-headline{color:var(--burgundy);}
-  .tier-close .tier-headline{color:var(--gold);}
+  .tier-close .tier-headline{color:var(--burgundy);}
   .tier-not .tier-headline{color:var(--navy);}
   .tier-over .tier-headline{color:var(--navy);}
   .tier-sub{
@@ -193,7 +192,7 @@
     font-weight:600;
     margin-bottom:14px;
   }
-  .cta-box .btn{margin-top:0;background:var(--gold);color:var(--navy);}
+  .cta-box .btn{margin-top:0;background:var(--burgundy);color:var(--cream);}
   .footnote{
     font-size:11px;
     color:var(--charcoal);
@@ -261,9 +260,14 @@
     margin-bottom:16px;
     display:none;
   }
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.5;margin:12px 0 0;text-transform:none;letter-spacing:0;font-weight:400;}
+  .consent input{width:auto;margin-top:3px;}
+  .consent-privacy{font-size:11px;opacity:0.75;margin:10px 0 0;}
+  .cobrand{text-align:center;margin:24px 0 8px;}
+  .cobrand img{max-width:240px;height:auto;}
   .review-note{
     background:var(--cream);
-    border:1px solid var(--gold);
+    border:1px solid var(--burgundy);
     padding:16px 18px;
     border-radius:3px;
     font-size:13px;
@@ -351,6 +355,10 @@
     <input type="text" id="email" placeholder="jane@email.com">
     <label for="phone">Phone</label>
     <input type="text" id="phone" placeholder="(646) 555-0100">
+    <!-- Consent wording SOS-CONSENT-2026-10-v2 (shared by her website and PESACH forms): exact text, both boxes unticked, never required. Email and texts only. -->
+    <label class="consent"><input type="checkbox" id="consent_email"> Yes, email me real estate news, listings and market updates from Shalinthia Miles, Licensed Real Estate Salesperson. I can unsubscribe anytime.</label>
+    <label class="consent"><input type="checkbox" id="consent_sms"> Yes, Shalinthia Miles, Licensed Real Estate Salesperson, may text me at the number above about my request, appointments and real estate updates, including marketing texts sent with automated technology. Consent is not a condition of any purchase or service. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help.</label>
+    <p class="consent-privacy">Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
     <button class="btn" onclick="submitLead()">Show My Readiness Report</button>
     <button class="btn btn-ghost" style="margin-top:10px;" onclick="goStep(3)">Back</button>
   </div>
@@ -554,7 +562,7 @@ function renderResult(r){
 
   html += `<div class="cta-box">
       <div class="cta-label">Next step</div>
-      <a href="https://calendly.com/expressoffers" target="_blank" style="text-decoration:none;">
+      <a href="https://book.shalinthia.com/meeting/BuyerConsultation?src=website" target="_blank" rel="noopener" style="text-decoration:none;">
         <button class="btn">Book a Consultation with Shalinthia</button>
       </a>
     </div>
@@ -571,6 +579,9 @@ function sendLead(r){
   const payload = {
     timestamp: new Date().toISOString(),
     name: state.name, email: state.email, phone: state.phone,
+    consent_email: document.getElementById('consent_email').checked ? "on" : "",
+    consent_sms: document.getElementById('consent_sms').checked ? "on" : "",
+    consent_language_version: "SOS-CONSENT-2026-10-v2",
     building: building,
     householdSize: state.hhSize,
     annualIncome: state.income,
@@ -591,5 +602,7 @@ function sendLead(r){
   }).catch(err=>console.error("Lead submission failed:", err));
 }
 </script>
+<!-- eXp co-branding (BRAND_2026.md): the Shalinthia | eXp Realty co-branded logo on every public page. -->
+<div class="cobrand"><img src="brand/logos/shalinthia-exp-cobrand-black.png" alt="Shalinthia Miles | eXp Realty"></div>
 </body>
 </html>

@@ -477,6 +477,12 @@
           <label for="address">Property Address</label>
           <input type="text" id="address" name="address" autocomplete="street-address" required>
         </div>
+        <!-- Consent wording SOS-CONSENT-2026-10-v2 (shared by her website and PESACH forms): exact text, unticked, never required. No mobile field here, so no text box. -->
+        <div class="field consent">
+          <label><input type="checkbox" name="consent_email" value="on"> Yes, email me real estate news, listings and market updates from Shalinthia Miles, Licensed Real Estate Salesperson. I can unsubscribe anytime.</label>
+        </div>
+        <input type="hidden" name="consent_language_version" value="SOS-CONSENT-2026-10-v2">
+        <p class="form-note consent-privacy">Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
         <button type="submit" class="btn-primary submit-btn">Get My Estimate</button>
       </form>
       <p class="form-note">No pressure. Just a clear conversation about your home and your options.</p>

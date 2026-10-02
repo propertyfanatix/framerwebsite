@@ -6,7 +6,7 @@
 
 
 
-Remove all public references to PropertyFanatix.
+SUPERSEDED (her decision, 2026-10-02: "Remember PropertyFanatix is accessible on my Framer site so clients can register there also"): PropertyFanatix appears only as a "Client Portal" link to clients.shalinthia.com (sign in or register there), never on ad landing pages, and no website form feeds it. See SOS_INTEGRATION.md section 5.
 
 
 
@@ -182,7 +182,6 @@ Do not create:
 
 \- New brands
 
-\- PropertyFanatix references
 
 \- New visual identity
 

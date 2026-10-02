@@ -1,5 +1,7 @@
 # August 2026 Rebuild — Current State Report
 
+> **PARTLY REPLACED BY SOS, PENDING SHALINTHIA'S CONFIRMATION (2026-10-02).** Where this file describes a website-to-Lofty bridge, Lofty as the system of record, Calendly or a Google Apps Script lead endpoint, it is out of date: website forms now send leads to SOS (`SOS_INTEGRATION.md` at the repo root), SOS writes HubSpot (the record) and Lofty, and bookings go through Reservation at book.shalinthia.com. Retiring the old plan for good is Shalinthia's decision.
+
 **Status:** READY FOR SHALINTHIA REVIEW — BASELINE ONLY  
 **Audit date:** August 20, 2026  
 **Boundary:** `Shalinthia.com August Rebuild` Framer project `pDrB7QpSt1oHZdX920Q6`; no live-site publication performed.

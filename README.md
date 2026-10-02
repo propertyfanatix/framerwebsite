@@ -70,4 +70,6 @@ Use:
 
 Preserve the existing visual brand, color palette, typography, logo treatment, spacing character, and overall personal-site feel.
 
+**How the site connects to SOS (lead forms, consent wording, booking links, Client Portal link): `SOS_INTEGRATION.md`** at the repo root.
+
 **Current brand and co-branding rules: `BRAND_2026.md`** (co-branded logo on all marketing, no "Brokered by" line, guidelines v2026.2). It overrides older notes in this folder.

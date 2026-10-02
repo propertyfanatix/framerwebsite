@@ -39,6 +39,14 @@ Every recommendation must be framed as:
 - informed by local expertise
 - focused on protecting client equity
 
+## Consent on Lead Forms (SOS-CONSENT-2026-10-v2)
+
+Her decision (2026-10-01): one shared consent wording on her website and PESACH forms. Every lead form shows it exactly, in two separate boxes that are never pre-ticked and never required, and sends `consent_language_version` = `SOS-CONSENT-2026-10-v2`. Email and texts only: **never a phone-call box**. The text box goes only where the form has a mobile field. Changing any word needs a new version she approves in SOS first. Details: `SOS_INTEGRATION.md`.
+
+- **Email box:** "Yes, email me real estate news, listings and market updates from Shalinthia Miles, Licensed Real Estate Salesperson. I can unsubscribe anytime."
+- **Text box:** "Yes, Shalinthia Miles, Licensed Real Estate Salesperson, may text me at the number above about my request, appointments and real estate updates, including marketing texts sent with automated technology. Consent is not a condition of any purchase or service. Message frequency varies. Msg & data rates may apply. Reply STOP to cancel, HELP for help."
+- **Under both:** "Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. Privacy Policy" ("Privacy Policy" links to her privacy page, which must exist before any campaign goes live.)
+
 ## Fair Housing / Advertising
 
 - Do not use discriminatory or demographic-targeting language.

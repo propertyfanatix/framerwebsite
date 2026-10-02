@@ -1,7 +1,7 @@
 # Homepage Content — Shalinthia.com
 
 **Page:** `/`  
-**Primary audience:** Brooklyn homeowners who want clear, calm guidance before selling.  
+**Primary audience:** homeowners who want clear, calm guidance before selling.  
 **Primary CTA:** See If Your Property Qualifies  
 **Style rule:** Keep Shalinthia’s existing colors, fonts, logo treatment, and personal-site feel. Use generous whitespace, strong mobile hierarchy, and subtle motion only.
 
@@ -11,13 +11,13 @@
 
 ### Main headline
 
-**A Clearer Strategy for Selling Your Brooklyn Home**
+**A Clearer Strategy for Selling Your Home**
 
 ### Supporting copy
 
 Selling a home is not just about putting it on the market. It is about making thoughtful decisions about pricing, preparation, marketing, offers, and timing while protecting the equity you have built.
 
-I’m Shalinthia Miles, a licensed real estate salesperson in Brooklyn. I help homeowners in Flatbush and East Flatbush move forward with a strategy shaped by their priorities, local context, and careful analysis.
+I’m Shalinthia Miles, a Licensed Real Estate Salesperson. I help clients make intelligent real estate decisions every day, with a strategy shaped by their priorities, local context, and careful analysis.
 
 ### Primary CTA
 
@@ -378,7 +378,7 @@ No Reel or video belongs here.
 
 ### Short identity copy
 
-Shalinthia Miles is a licensed real estate salesperson in Brooklyn, NY, specializing in seller strategy for homeowners in Flatbush and East Flatbush.
+Shalinthia Miles is a Licensed Real Estate Salesperson who helps clients make intelligent real estate decisions every day.
 
 ### Navigation labels
 
@@ -389,6 +389,7 @@ Shalinthia Miles is a licensed real estate salesperson in Brooklyn, NY, speciali
 - Neighborhoods — `/neighborhoods`
 - Market Insights — `/market-insights`
 - Contact — `/contact`
+- Client Portal — `https://clients.shalinthia.com/signin` (sign in) and `/register` (create an account); publish on the day the portal goes live (SOS_INTEGRATION.md section 5)
 - Privacy — `/privacy`
 
 ### Footer compliance copy

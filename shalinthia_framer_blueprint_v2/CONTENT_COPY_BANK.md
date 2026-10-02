@@ -2,7 +2,7 @@
 
 ## Canonical Identity Sentence
 
-Shalinthia Miles is a licensed real estate salesperson in Brooklyn, NY, specializing in seller strategy for homeowners in Flatbush and East Flatbush through the Brooklyn 60-Day Seller Success Blueprint, a structured 60-day marketing program built on tactical empathy, ethical urgency, and AI-assisted marketing.
+Shalinthia Miles is a Licensed Real Estate Salesperson who helps clients make intelligent real estate decisions every day. For Flatbush and East Flatbush homeowners, that includes the Brooklyn 60-Day Seller Success Blueprint, a structured 60-day marketing program built on tactical empathy, ethical urgency, and AI-assisted marketing.
 
 ## Homepage Program Preview
 

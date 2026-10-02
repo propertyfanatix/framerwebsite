@@ -230,7 +230,7 @@ If not, rewrite.
 
 Use variations of:
 
-"I help Brooklyn homeowners make confident real estate decisions through local expertise, thoughtful strategy, and personalized guidance."
+"I help clients make intelligent real estate decisions every day."
 
 ---
 

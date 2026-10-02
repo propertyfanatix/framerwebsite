@@ -25,7 +25,7 @@ It is not primarily the website of:
 
 Shalinthia is a licensed New York real estate salesperson.
 
-The current website strategy is hyperlocal to Brooklyn while remaining consistent with New York State licensure.
+Her positioning is broader than Brooklyn (her words, 2026-10-01: "I am not only focused on Brooklyn"). Neighborhood pages keep their local focus; the site as a whole never presents her as Brooklyn-only, and stays consistent with New York State licensure.
 
 ---
 
@@ -33,7 +33,7 @@ The current website strategy is hyperlocal to Brooklyn while remaining consisten
 
 The approved high-level site description is:
 
-> Private real estate advisory and market intelligence for Brooklyn's most distinctive sellers.
+> I help clients make intelligent real estate decisions every day.
 
 PRESERVE THIS POSITIONING.
 

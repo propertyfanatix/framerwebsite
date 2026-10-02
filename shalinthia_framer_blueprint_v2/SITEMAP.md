@@ -42,7 +42,7 @@ Pulled directly from the live project (`pDrB7QpSt1oHZdX920Q6`). This section ref
 - /market-insights
 
 ### Resources
-- /resources — HDFC Income & Down Payment Readiness Calculator: hero, stat strip, "how it works" steps, neighborhood coverage chips, interactive calculator (embedded, leads bridge live), FAQ, agent identity block
+- /resources — HDFC Income & Down Payment Readiness Calculator: hero, stat strip, "how it works" steps, neighborhood coverage chips, interactive calculator (embedded; its Google Apps Script lead endpoint is out of date and goes around SOS: see `SOS_INTEGRATION.md`), FAQ, agent identity block
 
 Note: geographic coverage live (Flatbush, East Flatbush, East New York, Brownsville, Long Island City) differs from the original v2 plan below (which had Flatbush, East Flatbush, Prospect Park South). Treat the live neighborhood set as current.
 

@@ -13,7 +13,7 @@ Shalinthia Miles is the primary brand.
 
 The approved broader positioning is:
 
-"Private real estate advisory and market intelligence for Brooklyn's most distinctive sellers."
+"I help clients make intelligent real estate decisions every day." (her positioning, 2026-10-01; she is "not only focused on Brooklyn")
 
 My Promise is the governing client-service philosophy.
 
