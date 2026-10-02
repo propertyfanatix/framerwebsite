@@ -45,7 +45,7 @@ These follow `FRAMER_BRAND_SYSTEM.md`: reuse the existing **Navigation** compone
 
 | What | URL | Rule |
 |---|---|---|
-| Book a time | `https://book.shalinthia.com` | Her booking site (Reservation). eXp approved its co-brand on 2026-09-29. |
+| Book a time | `https://book.shalinthia.com/?src=website` | Her booking site (Reservation). `?src=website` is how her dashboard counts bookings from this site. To show it inside a Framer page: Insert > Embed > URL, `https://book.shalinthia.com/?embed=1&src=website`, width Fill, height about 1600px (Reservation's README). It allows framing from shalinthia.com and Framer's own domains. eXp approved its co-brand on 2026-09-29. |
 | Refer someone | `https://book.shalinthia.com/referral` | The one referral form (D35). Never build a second referral form in Framer. A thank-you note only, never a reward. |
 | Introduced, and can't find the link | `https://book.shalinthia.com/newreferral` | D44. Never "call or text me" there. |
 | Leave a review | `https://book.shalinthia.com/testimonial` | D33. Forwards to her Google review box. Never a star rating in the ask. |
