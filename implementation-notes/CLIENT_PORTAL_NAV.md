@@ -28,7 +28,7 @@ These follow `FRAMER_BRAND_SYSTEM.md`: reuse the existing **Navigation** compone
 4. In the mobile menu variant, add the same item. It opens an inline section with the same line, **Sign in** and **Create your account**, stacked full width.
 5. Set both links to open in the same tab: no `target="_blank"`, never embedded.
 6. Preview on desktop and on a phone, and share the preview with her.
-7. Publish only after she approves it, after eXp compliance clears it in writing, and only on the day the portal goes live (section 4).
+7. Publish only after she approves it, and only on the day the portal goes live (section 4). It needs no separate eXp clearance (her words, 2026-10-03: "NOT TRUE" to a written-clearance step).
 
 ## 3. What the two links do (checked against the portal on 2026-10-02)
 
@@ -39,7 +39,6 @@ These follow `FRAMER_BRAND_SYSTEM.md`: reuse the existing **Navigation** compone
 ## 4. Before the item goes live
 
 - The portal must be live at `clients.shalinthia.com` first (the portal's `docs/GO-LIVE.md`). Until then both links reach a page that isn't there.
-- eXp compliance clears the item in writing first (the portal's `docs/legal/COUNSEL-QUESTIONS.md`, Q42).
 - Publish this Framer change on the same day the portal goes live.
 
 ## 5. Links this site may use (one home for each)
