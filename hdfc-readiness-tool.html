@@ -285,12 +285,11 @@
     <div id="p1" class="done"></div>
     <div id="p2"></div>
     <div id="p3"></div>
-    <div id="p4"></div>
   </div>
 
   <!-- STEP 1: Building -->
   <div class="card" id="step1">
-    <div class="step-label">Step 1 of 4</div>
+    <div class="step-label">Step 1 of 3</div>
     <h2 class="step-title">Which building are you applying to?</h2>
     <div class="error-msg" id="err1"></div>
     <label for="building">HDFC Building</label>
@@ -304,7 +303,7 @@
 
   <!-- STEP 2: Household & Income -->
   <div class="card" id="step2" style="display:none;">
-    <div class="step-label">Step 2 of 4</div>
+    <div class="step-label">Step 2 of 3</div>
     <h2 class="step-title">Household size &amp; income</h2>
     <div class="error-msg" id="err2"></div>
     <label for="hhSize">Household Size</label>
@@ -328,7 +327,7 @@
 
   <!-- STEP 3: Funds -->
   <div class="card" id="step3" style="display:none;">
-    <div class="step-label">Step 3 of 4</div>
+    <div class="step-label">Step 3 of 3</div>
     <h2 class="step-title">Down payment readiness</h2>
     <div class="error-msg" id="err3"></div>
     <label for="price">Target Purchase Price</label>
@@ -336,23 +335,8 @@
     <label for="funds">Liquid Funds Available</label>
     <input type="text" id="funds" inputmode="numeric" placeholder="Enter your available cash and savings">
     <div class="hint">Cash, savings, and other liquid assets available for your down payment and closing costs. Numbers only, no need to type $ or commas.</div>
-    <button class="btn" onclick="goStep(4)">See My Result</button>
+    <button class="btn" onclick="showResult()">See My Result</button>
     <button class="btn btn-ghost" style="margin-top:10px;" onclick="goStep(2)">Back</button>
-  </div>
-
-  <!-- STEP 4: Lead capture (soft gate) -->
-  <div class="card" id="step4" style="display:none;">
-    <div class="step-label">Step 4 of 4</div>
-    <h2 class="step-title">Where should we send your readiness report?</h2>
-    <div class="error-msg" id="err4"></div>
-    <label for="name">Full Name</label>
-    <input type="text" id="name" placeholder="Jane Doe">
-    <label for="email">Email</label>
-    <input type="text" id="email" placeholder="jane@email.com">
-    <label for="phone">Phone</label>
-    <input type="text" id="phone" placeholder="(646) 555-0100">
-    <button class="btn" onclick="submitLead()">Show My Readiness Report</button>
-    <button class="btn btn-ghost" style="margin-top:10px;" onclick="goStep(3)">Back</button>
   </div>
 
   <!-- RESULTS -->
@@ -399,8 +383,6 @@ const BUILDINGS = [
   {name:"48-18 Vernon Boulevard HDFC", ami:"120% AMI", caps:[112080,128160,144120,160080,172886,185693,198499,211306], review:false},
 ];
 
-const LEADS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxt_OluU6_RbXL2f2FT3baf1bBEzJJEHdd14JryZXobG7EN6qOTnktiD8YuN3Gk_rfZug/exec";
-
 let state = {};
 
 // Populate building dropdown
@@ -415,10 +397,10 @@ BUILDINGS.forEach((b,i)=>{
 sel.addEventListener('change', ()=>{
   const hint = document.getElementById('buildingHint');
   if(sel.value === "__other__"){
-    hint.textContent = "No problem — we'll follow up once we've verified this building's income caps.";
+    hint.textContent = "No problem. Book a consultation and we'll check this building's income caps with you.";
   } else if(sel.value !== ""){
     const b = BUILDINGS[sel.value];
-    hint.textContent = b.review ? "This building uses a formula-based cap — we'll review your numbers manually." : "AMI Tier: " + b.ami;
+    hint.textContent = b.review ? "This building uses a formula-based cap. Book a consultation and we'll review your numbers with you." : "AMI Tier: " + b.ami;
   } else {
     hint.textContent = "";
   }
@@ -438,7 +420,7 @@ function showErr(id, msg){
 }
 
 function goStep(n){
-  for(let i=1;i<=4;i++){
+  for(let i=1;i<=3;i++){
     document.getElementById('step'+i).style.display = (i===n) ? 'block':'none';
     document.getElementById('p'+i).classList.toggle('done', i<=n);
   }
@@ -457,29 +439,20 @@ function goStep(n){
     state.hhSize = parseInt(hh);
     state.income = inc;
   }
-  if(n===4){
-    const price = parseMoney(document.getElementById('price').value);
-    const funds = parseMoney(document.getElementById('funds').value);
-    if(price===null || funds===null){ showErr('err3','Please enter a purchase price and your liquid funds.'); document.getElementById('step3').style.display='block'; document.getElementById('step4').style.display='none'; document.getElementById('p4').classList.remove('done'); return; }
-    showErr('err3','');
-    state.price = price;
-    state.funds = funds;
-  }
 }
 
-function submitLead(){
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  if(!name || !email){ showErr('err4','Please enter your name and email.'); return; }
-  showErr('err4','');
-  state.name = name; state.email = email; state.phone = phone;
+// The result shows in the browser and nothing is sent anywhere (her decision, 2026-10-03: stop the calculator's send
+// until Reservation's version is ready). No name, email, phone or figure leaves this page.
+function showResult(){
+  const price = parseMoney(document.getElementById('price').value);
+  const funds = parseMoney(document.getElementById('funds').value);
+  if(price===null || funds===null){ showErr('err3','Please enter a purchase price and your liquid funds.'); return; }
+  showErr('err3','');
+  state.price = price;
+  state.funds = funds;
 
-  const result = computeResult();
-  renderResult(result);
-  sendLead(result);
-
-  document.getElementById('step4').style.display='none';
+  renderResult(computeResult());
+  document.getElementById('step3').style.display='none';
   document.getElementById('results').style.display='block';
 }
 
@@ -506,8 +479,8 @@ function computeResult(){
     tier = "Manual Review Needed";
     tierClass = "tier-not";
     tierMsg = isOther
-      ? "This building isn't in our system yet — we'll verify caps and follow up with you directly."
-      : "This building uses a statutory formula rather than a flat income cap — we'll review your numbers manually.";
+      ? "This building isn't in our list yet. Book a consultation and we'll verify its income caps with you."
+      : "This building uses a statutory formula rather than a flat income cap. Book a consultation and we'll review your numbers with you.";
   } else if(capOveragePct !== null && capOveragePct > 10){
     tier = "Let's Explore Other Options";
     tierClass = "tier-over";
@@ -560,35 +533,6 @@ function renderResult(r){
     </div>
   </div>`;
   el.innerHTML = html;
-}
-
-function sendLead(r){
-  if(!LEADS_ENDPOINT || LEADS_ENDPOINT.indexOf("PASTE_YOUR") === 0){
-    console.warn("Leads endpoint not configured yet — lead not sent.", state, r);
-    return;
-  }
-  const building = state.buildingIdx === "__other__" ? "Not Listed: (free text not captured in this version)" : BUILDINGS[state.buildingIdx].name;
-  const payload = {
-    timestamp: new Date().toISOString(),
-    name: state.name, email: state.email, phone: state.phone,
-    building: building,
-    householdSize: state.hhSize,
-    annualIncome: state.income,
-    liquidFunds: state.funds,
-    purchasePrice: state.price,
-    incomeCapUsed: r.cap || "",
-    downPaymentNeeded: r.downNeeded,
-    resultTier: r.tier,
-    incomeCheck: r.incomePass===null ? "N/A - Manual Review" : (r.incomePass ? "Pass":"Fail"),
-    fundsCheck: r.fundsPass ? "Pass":"Fail",
-    notes: r.needsReview ? "Flagged for manual building review" : ""
-  };
-  fetch(LEADS_ENDPOINT, {
-    method: "POST",
-    mode: "no-cors",
-    headers: {"Content-Type":"text/plain"},
-    body: JSON.stringify(payload)
-  }).catch(err=>console.error("Lead submission failed:", err));
 }
 </script>
 </body>
