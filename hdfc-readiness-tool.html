@@ -358,11 +358,10 @@
     <input type="text" id="email" placeholder="jane@email.com">
     <label for="phone">Phone</label>
     <input type="text" id="phone" placeholder="(646) 555-0100">
-    <!-- Her decision (2026-10-02): "DO NOT use 2 checkboxes. Notice is sufficient." One notice, SOS-CONSENT-2026-10-HDFC-NOTICE
-         (SOS config/compliance-sources.yaml holds these exact words and their hash). Built from wording she had already approved:
-         SOS-CONSENT-2026-10-v2 (the texting and privacy sentences) and Reservation's booking form ("Msg & data rates may apply."),
-         with PropertyFanatix's standard disclosure ("Text STOP anytime to opt out."). Change a word only with a new version in SOS. -->
-    <p class="consent-notice">Sending this shares your answers and result with Shalinthia Miles, Licensed Real Estate Salesperson, who will email you the HDFC Co-op Guide and may text you at the number above about your request and appointments, including texts sent with automated technology. Msg &amp; data rates may apply. Text STOP anytime to opt out. Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
+    <!-- Her decision (2026-10-02): "DO NOT use 2 checkboxes. Notice is sufficient." One notice, in her exact words (2026-10-03:
+         "USE THIS"), SOS-CONSENT-2026-10-HDFC-NOTICE (SOS config/compliance-sources.yaml holds these words and their hash).
+         Change a word only with a new version in SOS. -->
+    <p class="consent-notice">This delivers the HDFC Co-op Guide to your email and sends your contact information to Shalinthia Miles, Licensed Real Estate Salesperson who may reach out to you regarding your request. Msg &amp; data rates may apply. Text STOP anytime to opt out. Your details are never sold, and your mobile number and text consent are never shared with third parties for marketing purposes. <a href="https://shalinthia.com/privacy">Privacy Policy</a></p>
     <button class="btn" onclick="submitLead()">Send My Guide &amp; See My Result</button>
     <button class="btn btn-ghost" style="margin-top:10px;" onclick="goStep(3)">Back</button>
   </div>
